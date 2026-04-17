@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://ctptbhb0gj3jg"]
+
+[ext_resource type="Script" uid="uid://du52c1456ev3q" path="res://script/worldlv.gd" id="1_ivpyd"]
+[ext_resource type="Texture2D" uid="uid://d2i4ioimu2yd3" path="res://assets/dunjion.jpg" id="2_evghx"]
+
+[node name="worldlv" type="Node2D" unique_id=515139088]
+script = ExtResource("1_ivpyd")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=44311795]
+modulate = Color(0, 0.5058824, 1, 1)
+position = Vector2(585.00006, 310)
+scale = Vector2(1.9140625, 1.9194444)
+texture = ExtResource("2_evghx")
+
+[node name="Control" type="Control" parent="." unique_id=1683104404]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="Control" unique_id=160918265]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 361.0
+offset_right = 375.0
+offset_bottom = 506.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 100
+text = "1"
+
+[node name="Button4" type="Button" parent="Control" unique_id=389150693]
+layout_mode = 0
+offset_left = 46.0
+offset_top = 65.0
+offset_right = 223.0
+offset_bottom = 210.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0.9490196, 0, 0, 1)
+theme_override_font_sizes/font_size = 100
+text = "←"
+
+[node name="Button2" type="Button" parent="Control" unique_id=93399343]
+layout_mode = 0
+offset_left = 473.0
+offset_top = 361.0
+offset_right = 690.0
+offset_bottom = 506.0
+theme_override_font_sizes/font_size = 100
+text = " 2 🔒"
+
+[node name="Button3" type="Button" parent="Control" unique_id=1205093222]
+layout_mode = 0
+offset_left = 770.0
+offset_top = 365.0
+offset_right = 987.0
+offset_bottom = 510.0
+theme_override_font_sizes/font_size = 100
+text = " 3 🔒
+"
+
+[node name="Label" type="Label" parent="." unique_id=216115469]
+offset_left = 291.0
+offset_right = 890.0
+offset_bottom = 273.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 200
+text = "Levels"
+
+[connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Control/Button4" to="." method="_on_button_4_pressed"]

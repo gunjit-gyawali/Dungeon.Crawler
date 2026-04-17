@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://rxycu3fdssdm"]
+
+[ext_resource type="Texture2D" uid="uid://cb5a45sdx052d" path="res://assets/png/ground-float.png" id="1_s0ih4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wfaay"]
+size = Vector2(129, 72)
+
+[node name="platform" type="AnimatableBody2D" unique_id=732623755]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=19474897]
+texture = ExtResource("1_s0ih4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=185154423]
+shape = SubResource("RectangleShape2D_wfaay")

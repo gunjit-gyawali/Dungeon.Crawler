@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://ccey8s8wb2rax"]
+
+[ext_resource type="Script" uid="uid://v1n5itxtdg1a" path="res://script/end.gd" id="1_acqqh"]
+[ext_resource type="Texture2D" uid="uid://d2i4ioimu2yd3" path="res://assets/dunjion.jpg" id="2_u4okq"]
+
+[node name="end" type="Node2D" unique_id=409769327]
+script = ExtResource("1_acqqh")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1727533815]
+modulate = Color(0, 0.5058824, 1, 1)
+self_modulate = Color(1, 0.54901963, 1, 1)
+position = Vector2(579.00006, 310.00003)
+scale = Vector2(1.9140625, 1.9194444)
+texture = ExtResource("2_u4okq")
+
+[node name="Control" type="Control" parent="." unique_id=1371843722]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 497.0
+offset_top = 446.0
+offset_right = 537.0
+offset_bottom = 486.0
+
+[node name="Button" type="Button" parent="Control" unique_id=884873659]
+modulate = Color(1, 1, 0.7764706, 1)
+layout_mode = 0
+offset_left = -117.0
+offset_top = -227.0
+offset_right = 329.0
+offset_bottom = -98.0
+theme_override_font_sizes/font_size = 88
+text = "Play Again"
+
+[node name="Button3" type="Button" parent="Control" unique_id=277568171]
+modulate = Color(1, 1, 0.7764706, 1)
+layout_mode = 0
+offset_left = -119.0
+offset_top = -87.0
+offset_right = 340.0
+offset_bottom = 35.0
+theme_override_font_sizes/font_size = 83
+text = "Main Menu"
+
+[node name="Button2" type="Button" parent="Control" unique_id=1812201197]
+layout_mode = 0
+offset_left = -88.0
+offset_top = 43.0
+offset_right = 309.0
+offset_bottom = 176.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 91
+text = "Exit"
+
+[node name="Label" type="Label" parent="." unique_id=106927350]
+offset_left = 111.0
+offset_top = 25.0
+offset_right = 1095.0
+offset_bottom = 208.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 65
+text = "This is the end of the game but 
+I will add more levels in future"
+
+[connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Control/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Control/Button2" to="." method="_on_button_2_pressed"]
